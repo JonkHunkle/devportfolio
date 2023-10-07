@@ -10,24 +10,25 @@ export default function Navbar() {
         <>
         <h1 className='visually-hidden'>Navbar</h1>
         {
-            !showSidebar ?
+            showSidebar ?
                 (
-                    <div className=" fixed top-0 flex right-10 flex-col">
-                        <div
-                            className=" flex w-auto bg-transparent h-auto text-4xl text-white items-center cursor-pointer self-center"
-                            onClick={() => setShowSidebar(!showSidebar)}> x                    </div>
-
+                    <div className="nav-bar">
+                        <div className="bg-transparent h-auto text-4xl text-white cursor-pointer"
+                        onClick={() => setShowSidebar(!showSidebar)}>
+                            x
+                        </div>
+                        <div className="link-container" style={{display:'flex', flexDirection:'column'}}>
                         <Link to='/' className='hover:bg-zinc-300 h-1/3 flex flex-col justify-around navBtn' onClick={() => setShowSidebar(!showSidebar)}>Home</Link>
                         <Link to='/contact' className='hover:bg-zinc-300 h-1/3 flex flex-col justify-around navBtn' onClick={() => setShowSidebar(!showSidebar)}>Contact</Link>
                         <Link to='/projects' className='hover:bg-zinc-300 h-1/3 flex flex-col justify-around navBtn' onClick={() => setShowSidebar(!showSidebar)}>Projects</Link>
-                        <Link to='/resume' className='hover:bg-zinc-300 h-1/3 flex flex-col justify-around navBtn' onClick={() => setShowSidebar(!showSidebar)}>Resume</Link>
-
+                        </div>
                     </div>
                 ) : <svg
+                    style={{display:'flex', justifySelf:'end', placeSelf:'center'}}
                     onClick={() => setShowSidebar(!showSidebar)}
                     className="fixed z-30 flex items-center cursor-pointer  right-10 top-6"
                     fill="#000000"
-                    viewBox="0 0 100 80"
+                    viewBox="0 0 100 100"
                     width="40"
                     height="40"
                 >
