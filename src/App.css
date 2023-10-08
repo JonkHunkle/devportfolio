@@ -456,7 +456,7 @@ text-align: center;
     color:rgba(139, 158, 141)
   }
   .nav-bar{
-    transition-duration: .5s;
+    transition: .5s;
     right: -50%;
     position: fixed;
     background-color:rgba(0, 0, 0, 0.6);
@@ -503,6 +503,6 @@ text-align: center;
     font-size: 5rem;
   }
   #burgerIcon{
-    transition: 1s;
+    /* transition: .2s; */
   }
 }

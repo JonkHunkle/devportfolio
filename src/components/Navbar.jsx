@@ -7,11 +7,15 @@ export default function Navbar() {
     const [showSidebar, setShowSidebar] = useState(false)
 
     const handleClick =(e) =>{
+        let burgerIcon=document.getElementById("burgerIcon")
+        let  navBar=document.getElementById("nav")
         if(!showSidebar){
             document.getElementById("nav").style.right = "-50%"
+            document.getElementById("burgerIcon").style.transitionDuration = '1s'
             document.getElementById("burgerIcon").style.opacity = 100
         }else{
             document.getElementById("nav").style.right = "0"
+            document.getElementById("burgerIcon").style.transitionDuration = '.5s'
             document.getElementById("burgerIcon").style.opacity = 0
         }
         setShowSidebar(!showSidebar)
@@ -24,7 +28,7 @@ export default function Navbar() {
             id='burgerIcon'
             style={{display:'flex', justifySelf:'end', placeSelf:'center'}}
             onClick={handleClick}
-            className="fixed z-30 flex items-center cursor-pointer  right-10 top-6"
+            className=""
             fill="#000000"
             viewBox="0 0 100 100"
             width="40"
