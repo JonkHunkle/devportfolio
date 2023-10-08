@@ -11,9 +11,9 @@ function App() {
   return (
     <div className="App">
       <h1 className='visually-hidden'>David's Portfolio Page</h1>
-      <Router>
+      <Router style={{height:'100%'}}>
         <Header />
-        <main className='main' style={{height:'100%'}}>
+        <main className='main'>
         <Routes>
           <Route path="/" element={<About />} />
           <Route path="/contact" element={<Contact />} />
@@ -21,7 +21,6 @@ function App() {
         </Routes>
         </main>
       <Footer />
-
       </Router>
     </div>
   )
