@@ -7,13 +7,10 @@ import { Link } from 'react-router-dom'
 
 export default function Header(props) {
     const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
-    const handleClick=()=>{
-        console.log('hello')
-    }
     return (
         <div className='header'>
             <h1 className='visually-hidden'>Header</h1>
-            <Link to='/' className='header-link'>David</Link>
+            <Link to='/'className='header-link'>David</Link>
 
                 {isMobile ?
                     (<Navbar />) : (<div className='nav-button-group'>

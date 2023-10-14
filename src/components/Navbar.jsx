@@ -7,9 +7,7 @@ export default function Navbar() {
     const [showSidebar, setShowSidebar] = useState(false)
 
     const handleClick =(e) =>{
-        let burgerIcon=document.getElementById("burgerIcon")
-        let  navBar=document.getElementById("nav")
-        if(!showSidebar){
+        if(showSidebar){
             document.getElementById("nav").style.right = "-50%"
             document.getElementById("burgerIcon").style.transitionDuration = '1s'
             document.getElementById("burgerIcon").style.opacity = 100
@@ -19,6 +17,8 @@ export default function Navbar() {
             document.getElementById("burgerIcon").style.opacity = 0
         }
         setShowSidebar(!showSidebar)
+        const {id, to} = e.target
+        console.log(id)
     }
 
     return (
@@ -44,9 +44,9 @@ export default function Navbar() {
                     x
                 </div>
                 <div className="link-container" style={{display:'flex', flexDirection:'column'}}>
-                <Link to='/' className='hover:bg-zinc-300 h-1/3 flex flex-col justify-around navBtn' onClick={handleClick}>Home</Link>
-                <Link to='/contact' className='hover:bg-zinc-300 h-1/3 flex flex-col justify-around navBtn' onClick={handleClick}>Contact</Link>
-                <Link to='/projects' className='hover:bg-zinc-300 h-1/3 flex flex-col justify-around navBtn' onClick={handleClick}>Projects</Link>
+                    <Link to='/' className='hover:bg-zinc-300 h-1/3 flex flex-col justify-around navBtn' id='homeLink'onClick={handleClick}>Home</Link>
+                    <Link to='/contact' className='hover:bg-zinc-300 h-1/3 flex flex-col justify-around navBtn' id='contactLink'onClick={handleClick}>Contact</Link>
+                    <Link to='/projects' className='hover:bg-zinc-300 h-1/3 flex flex-col justify-around navBtn' id='projectLink' onClick={handleClick}>Projects</Link>
                 </div>
             </div>
         </>)
