@@ -7,6 +7,7 @@ let {VITE_APP_SERVICE,
 export default function Contact() {
     const [modalOpen, setModalOpen] = useState(false)
     const [formState, setForm] = useState({ name: '', email: '', message: '' })
+    const [isActive, setIsActive] = useState(false);
     
     const handleSubmit =  async (e) => {
         e.preventDefault();
@@ -46,9 +47,11 @@ export default function Contact() {
                 alert('that email is invalid! If you used autofill, please try again')
             }
     }
-
+    useEffect(() => {
+        setIsActive(true);
+      }, []);
     return (
-        <div className='page contact'>
+        <div className={`page contact ${isActive ? 'active' : ''}`}>
             <h1 className='visually-hidden'>Contact Page</h1>
                 <h2 className='animated-gradient'>Lets connect!</h2> 
             <div className='card'>

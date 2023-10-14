@@ -14,7 +14,7 @@ function App() {
       <Router style={{height:'100%'}}>
         <Header />
         <main className='main'>
-        <Routes>
+        <Routes >
           <Route path="/" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects" element={<Projects />} />

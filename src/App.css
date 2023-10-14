@@ -6,7 +6,8 @@ a{
 }
 .App{
   min-width:100svw;
-  min-height: 100svh;
+  /* max-height: 100vh; */
+  height: 100svh;
   /* background-color: rgba(0, 0, 0, 0.6); */
   display: flex;
   flex-direction: column;
@@ -29,11 +30,13 @@ a{
 } */
 .main{
   width: 100%;
-  min-height:100%;
+  /* min-height:100%; */
+  /* max-height:100%; */
   background-color: rgba(0, 0, 0, 0.6);
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .main::before{
   /* opacity: 50%; */
@@ -66,6 +69,8 @@ a{
   box-shadow:0 0 1rem rgba(0, 0, 0, 0.25) ;
   text-align: center;
   width: 100%;
+  z-index: 999;
+  top:0;
   /* position: fixed; */
   /* top: 0; */
   /* left:0; */
@@ -151,17 +156,20 @@ a{
 
 
 .page{
-  height: 100%;
   /* width: 100%; */
   /* margin: auto; */
   display: flex;
   flex-direction: column;
   place-content: center;
-  gap:3rem;
+  gap:1.5rem;
+  overflow: hidden;
+  padding:1.5rem;
   /* height: min-content; */
   width: 100%;
   align-items: center;
   justify-content:center;
+    opacity: 0;
+  transition: opacity 0.5s;
 }
 
 .card{
@@ -170,11 +178,11 @@ a{
   flex-direction: column;
   border-radius: .5rem;
   height: min-content;
-  width: 50svw;
+  width: 75svw;
   background-color: rgba(0, 0, 0, .25);
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.25);
   place-self: center;
-  padding: 3rem;
+  padding: 1.5rem;
   text-align:center;
   letter-spacing: .1rem;
   line-height: 1.5;
@@ -203,14 +211,15 @@ text-shadow: 0 0 10px rgba(186, 212, 189, 0.4);
 }
 .resume-link:hover{
   text-shadow: 0 0 10px rgba(186, 212, 189,.4);
-
 }
+
+
 .footer{
   padding: .75rem 0 ;
   width:100%;
   background-color: rgba(139, 158, 141);
   text-align: center;
-  bottom: 0;
+  z-index: 999;
 }
 .footer-header{
   font-size: 1.5rem;
@@ -434,11 +443,11 @@ text-align: center;
     width: 1px;
 }
 
+.active{
+  opacity: 1;
+}
+
 @media (max-width: 428px) {
-  .footer{
-  position: sticky;
-  bottom:0;
-  }
   /* .App{
     min-height: inherit;
   } */
@@ -460,9 +469,9 @@ text-align: center;
     right: -50%;
     position: fixed;
     background-color:rgba(0, 0, 0, 0.6);
-    padding:.5rem 2rem;
+    padding:2rem 2rem;
     display: flex;
-    z-index: 100;
+    z-index: 999;
     flex-direction: column;
     justify-content: right;
     gap:1rem
@@ -477,7 +486,6 @@ text-align: center;
     min-height: 100%;
     display: flex;
     flex-grow: 1;
-    /* background-color: rgba(0, 0, 0, 0.6); */
     flex-direction: column;
     align-content: center;
     flex-wrap: nowrap;
@@ -485,14 +493,15 @@ text-align: center;
     justify-content: center;
   }
   .card{
-    font-size: 1.5rem;
-    width: 100%;
+    transition: 1s;
+  font-size: 1.5rem;
+  width: 100%;
   color: #e3e3e3;
   border-radius: .5rem;
   background-color: rgba(0, 0, 0, 0);
   border:none;
   box-shadow: none;
-  padding: 3rem;
+  padding: 1.5rem;
   text-align:center;
   letter-spacing: .1rem;
   line-height: 1.5;
@@ -502,7 +511,5 @@ text-align: center;
     padding-top: 2rem;
     font-size: 5rem;
   }
-  #burgerIcon{
-    /* transition: .2s; */
-  }
+ 
 }
