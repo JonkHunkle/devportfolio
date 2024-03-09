@@ -56,7 +56,7 @@ export default function About() {
                                 music
                         </a> production to exercise critical thinking, creativity and anticipation of user needs. My knowledge of HTML, CSS, Javascript, and  ensures both a smooth user experience and clean, concise code. Working on projects asynchronously with diverse teams has strengthened my skills in communication, collaboration and Git. Using these strengths, I strive to build accessible, intuitive, and responsive web apps for a far-reaching audience.
                     </p>
-                    <a className='resume-link text-3xl text-center w-fit flex flex-col content-center justify-around self-center hover:bg-slate-500 rounded-box hover:bg-opacity-25 transition duration-700 bg-slate-300 bg-opacity-25 md:py-8 p-12 md:px-96' href="https://drive.google.com/file/d/1hYH8tKxDLmgGyWBoqduaVABIVg6Of-W0/view?usp=sharing" download='davidResume' target='_blank' rel="noreferrer" >Download my Resume!
+                    <a className='resume-link text-3xl text-center w-fit flex flex-col content-center justify-around self-center hover:bg-slate-500 rounded-box hover:bg-opacity-25 transition duration-700 bg-slate-300 bg-opacity-25 md:py-8 p-12 md:px-96' href="https://docs.google.com/document/d/1IuIvUCFWZ0LdWjm8Sm29dOGAJDZL4Y3KJ1-_7dQwjdY/edit?usp=sharing" download='davidResume' target='_blank' rel="noreferrer" >Download my Resume!
             </a>
                 {/* </div> */}
                 {/* <img className='big-D md:w-2/6' alt='me!' src={MyPhoto} /> */}
