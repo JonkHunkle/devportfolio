@@ -259,8 +259,19 @@ text-shadow: 0 0 10px rgba(186, 212, 189, 0.4);
   -moz-animation: Animation 5s ease infinite;
   animation: Animation 7s ease infinite;
   text-shadow: 0 0 10px #1B34294a;
+  transition: filter 1s;
+  filter: none;
 }
 
+#landing .animated-gradient {
+    cursor:pointer;
+    font-size: 15rem ;
+}
+#landing .animated-gradient:hover {
+  filter: drop-shadow(.5rem .5rem 2rem rgba(139, 158, 141));
+  /* filter:invert(75%); */
+  /* animation: none; */
+    }
 .contact{
   /* height: 100%; */
   /* display: flex; */
@@ -361,25 +372,30 @@ text-align: center;
 .carousel-caption{
   display: flex !important;
   flex-direction: column;
-  justify-content: space-evenly;
+  text-align: center;
+  padding: 0;
+  font-weight:900;
+  color: inherit;
 }
 
 .project-link{
     font-family : 'Courier New', Courier, monospace;
     font-size: 2.5rem;
     font-weight: 600;
-    color: #d9e3d7;
     text-decoration: none;
     transition: transform 1s ease-in-out;
-}
-.carousel-item img {
-  width:75%;
-  place-self: center;
-  
 }
   .project-link:hover{
     text-shadow: 0 0 10px rgba(156, 160, 155, .5);
   }
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
 
 @-webkit-keyframes Animation {
   0%{
@@ -399,31 +415,31 @@ text-align: center;
 @-moz-keyframes Animation {
   0%{
     background-position:-100% -10%;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+    text-shadow: 5rem 5rem 10px rgba(0, 0, 0, 0.75);
 
   }
   50%{
     background-position:91% 100%;
-    text-shadow: 0 0 1px rgb(156, 160, 155);
+    text-shadow: 5rem 5rem 1px rgb(156, 160, 155);
   }
   100%{
     background-position:-100% 0%;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+    text-shadow: 5rem 5rem 10px rgba(0, 0, 0, 0.75);
   }
 }
 @keyframes Animation { 
   0%{
     background-position:-100% -10%;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+    text-shadow: 5px 5px 2rem rgba(0, 0, 0, 0.75);
 
   }
   50%{
     background-position:91% 100%;
-    text-shadow: 0 0 1px rgb(156, 160, 155);
+    text-shadow: 5px 5px 1px rgb(156, 160, 155);
   }
   100%{
     background-position:-100% 0%;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+    text-shadow: 5px 5px 2rem rgba(0, 0, 0, 0.75);
   }
 }
 

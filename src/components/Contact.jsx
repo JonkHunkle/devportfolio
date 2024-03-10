@@ -3,8 +3,10 @@ import emailjs from '@emailjs/browser'
 let {VITE_APP_SERVICE,
     VITE_APP_TEMPLATE,
     VITE_APP_PASSWORD} =import.meta.env
-
-export default function Contact() {
+    import { useMediaQuery } from 'react-responsive';
+    
+    export default function Contact() {
+    const isMobile = useMediaQuery({ query: `(max-width: 428px)` });
     const [modalOpen, setModalOpen] = useState(false)
     const [formState, setForm] = useState({ name: '', email: '', message: '' })
     const [isActive, setIsActive] = useState(false);
@@ -53,12 +55,12 @@ export default function Contact() {
     return (
         <div className={`page contact ${isActive ? 'active' : ''}`}>
             <h1 className='visually-hidden'>Contact Page</h1>
-                <h2 className='animated-gradient'>Lets connect!</h2> 
-            <div className='card'>
-                <p className='contact-header'>Fill out the form below and I will get back to you as soon as possible!</p>
+                <h2 className='animated-gradient' style={{fontSize:isMobile?'3.5rem':null, textAlign:'left', padding:isMobile?0:null}}>Lets connect!</h2> 
+            <div className='card' style={{gap:'3.5rem'}}>
+                <p className='contact-header' style={{fontSize:isMobile?'1.25rem':null}}>Fill out the form below and I will get back to you as soon as possible!</p>
 
-                        <form className='contact-form flex flex-col'>
-                            <div className="form-group mb-6">
+                        <form className='contact-form flex flex-col' style={{gap:'2.5rem'}}>
+                            <div className="form-group mb-6 flex-row mx-auto" style={{width:'75svw', gap:'1rem'}}>
                                 <input type="text" onChange={handleChange} className="form-control block
         w-full
         px-3
@@ -75,8 +77,7 @@ export default function Contact() {
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" name='name'
         value={formState.name}
                                     placeholder="Name" />
-                            </div>
-                            <div className="form-group mb-6">
+                            
                                 <input type="email" onBlur={validateEmail} onChange={handleChange} className="form-control block
         w-full
         px-3
@@ -115,9 +116,9 @@ export default function Contact() {
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
       "
         value={formState.message}
-        style={{resize:'none'}}
+        style={{resize:'none', placeSelf:'center', width:'75svw'}}
         name='message'
-                                    rows="3"
+                                    rows="5"
                                     placeholder="Message"
                                 />
                             </div>

@@ -3,7 +3,7 @@
 <rect width="1440" height="1024" fill="white"/>
 <rect width="1440" height="1024" fill="url(#pattern0)"/>
 <g filter="url(#filter0_b_102_5)">
-<rect width="1440" height="1024" rx="8" fill="url(#paint0_radial_102_5)" fill-opacity="0.75"/>
+<rect width="1440" height="1024" rx="8" fill="white" fill-opacity="0.5"/>
 </g>
 </g>
 <defs>
@@ -16,12 +16,6 @@
 <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_102_5"/>
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_102_5" result="shape"/>
 </filter>
-<radialGradient id="paint0_radial_102_5" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1518.5 1134.5) rotate(-141.188) scale(1853.16 2342.93)">
-<stop stop-color="#F4CE14"/>
-<stop offset="0.325341" stop-color="#495E57"/>
-<stop offset="0.827166" stop-color="#8A8A8A"/>
-<stop offset="1" stop-color="#D9E3D7"/>
-</radialGradient>
 <clipPath id="clip0_102_5">
 <rect width="1440" height="1024" fill="white"/>
 </clipPath>
