@@ -6,15 +6,42 @@ export default function Navbar() {
 
     const [showSidebar, setShowSidebar] = useState(false)
 
-    const handleClick =(e) =>{
+    const handleClick =async (e) =>{
         if(showSidebar){
+            document.getElementById("burgerIcon").style.display = "initial"
+            await new Promise((resolve, reject) => {
+                setTimeout(()=>{
+                    resolve()
+                },100)
+            })
             document.getElementById("nav").style.right = "-50%"
+            document.getElementById("nav").style.transitionDuration = '1s'
             document.getElementById("burgerIcon").style.transitionDuration = '1s'
-            document.getElementById("burgerIcon").style.opacity = 100
+            document.getElementById("burgerIcon").style.opacity = 1
+            
+
         }else{
-            document.getElementById("nav").style.right = "0"
-            document.getElementById("burgerIcon").style.transitionDuration = '.5s'
+            document.getElementById("nav").style.display ='inline-block'
+            await new Promise((resolve, reject) => {
+                setTimeout(()=>{
+                    resolve()
+                },100)
+            })
             document.getElementById("burgerIcon").style.opacity = 0
+            document.getElementById("burgerIcon").style.transitionDuration = '.5s'
+            
+            document.getElementById("nav").style.right = 0
+            document.getElementById("nav").style.visibility = "visible"
+            document.getElementById("nav").style.transitionDuration = '1s'
+            
+            document.getElementById("burgerIcon").style.opacity = 0
+            document.getElementById("burgerIcon").style.transitionDuration = '.5s'
+            await new Promise((resolve, reject) => {
+                setTimeout(()=>{
+                    resolve()
+                },500)
+            })
+            document.getElementById("burgerIcon").style.display = "none"
         }
         setShowSidebar(!showSidebar)
         const {id, to} = e.target
@@ -37,7 +64,7 @@ export default function Navbar() {
                 <rect y="30" width="100" height="10"></rect>
                 <rect y="60" width="100" height="10"></rect>
             </svg>
-            <div className="nav-bar" id="nav">
+            <div className="nav-bar" id="nav" style={{display:'none',visibility:"hidden"}}>
                 <div className="bg-transparent h-auto text-4xl text-white cursor-pointer"
                 onClick={handleClick}
                 style={{placeSelf:'end', fontSize:'2rem'}}>
