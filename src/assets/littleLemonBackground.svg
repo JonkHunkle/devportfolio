@@ -3,7 +3,7 @@
 <rect width="1440" height="1024" fill="white"/>
 <rect width="1440" height="1024" fill="url(#pattern0)"/>
 <g filter="url(#filter0_b_102_5)">
-<rect width="1440" height="1024" rx="8" fill="white" fill-opacity="0.5"/>
+<rect width="1440" height="1024" rx="8" fill="white" fill-opacity="0.75"/>
 </g>
 </g>
 <defs>

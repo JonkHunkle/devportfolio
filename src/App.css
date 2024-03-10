@@ -220,6 +220,8 @@ text-shadow: 0 0 10px rgba(186, 212, 189, 0.4);
   background-color: rgba(139, 158, 141);
   text-align: center;
   z-index: 999;
+  position: sticky;
+  bottom: 0;
 }
 .footer-header{
   font-size: 1.5rem;
