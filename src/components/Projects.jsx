@@ -12,12 +12,12 @@ export default function Projects() {
     setIsActive(true);
   }, []);
     return(
-        <div className={`page ${isActive ? 'active' : ''}`} style={{gap:'5rem'}}>
+        <div className={`page ${isActive ? 'active' : ''}`} style={{gap:'2.5rem'}}>
             <h1 className='visually-hidden'>Projects Page</h1>
             <h2 className="animated-gradient" style={{fontSize:isMobile?'5rem':null, padding:isMobile?0:null}}>
             Projects
             </h2>
-            <div className="card" style={{padding:isMobile?0:null, lineHeight:1.5, color:'black'}}>
+            <div className="card" style={{padding:isMobile?0:null, color:'black'}}>
    <div id="carouselExampleCaptions" className="carousel slide carousel-fade" data-ride="carousel">
       <div className="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-label="Slide 1" aria-current="true"></button>
@@ -28,14 +28,15 @@ export default function Projects() {
       <div className="carousel-item active" style={{borderRadius:'.5rem', backgroundImage:`url(${synth})`, backgroundSize:'cover'}}>
             <h5 className='visually-hidden'>Lyre Bird Synthesizer</h5>
           <div className="carousel-caption d-md-block" style={{height:'inherit',placeContent:'center'}}>
-                <a className='project-link' href="https://jonkhunkle.github.io/WebSynth/" target='_blank' rel="noreferrer" style={{fontSize:isMobile?'2rem':null}}>
+                <a className='project-link' href="https://jonkhunkle.github.io/WebSynth/" target='_blank' rel="noreferrer" style={{fontSize:isMobile?'2rem':null, lineHeight:1.1, paddingTop:'1.2rem'}}>
                     Lyre Bird<br/>Synthesizer
                 </a>
-            <p style={{fontSize:isMobile?'1.25rem':null}}>Open source drone additive synthesizer</p>
+                <br/>
+            <p style={{fontSize:isMobile?'1rem':null}}>Open source drone additive synthesizer</p>
             <a className='project-link' href="https://github.com/JonkHunkle/WebSynth" target='_blank' rel="noreferrer"style={{fontSize:isMobile?'2rem':null}}>
               Repo
             </a>
-            <p style={{fontSize:isMobile?'1.25rem':null}}>
+            <p style={{fontSize:isMobile?'1rem':null}}>
               Tone.js, MUI, React
             </p>
           </div> 
@@ -43,14 +44,15 @@ export default function Projects() {
       <div className="carousel-item" style={{borderRadius:'.5rem', backgroundImage:`url(${mernStore})`, backgroundSize:'cover'}}>
             <h5 className='visually-hidden'>Anne's Antiques</h5>
           <div className="carousel-caption d-md-block" style={{height:'inherit',placeContent:'center'}}>
-                <a className='project-link' href="https://antique-store-frontend.onrender.com" target='_blank' rel="noreferrer" style={{fontSize:isMobile?'2rem':null}}>
+                <a className='project-link' href="https://antique-store-frontend.onrender.com" target='_blank' rel="noreferrer" style={{fontSize:isMobile?'2rem':null, lineHeight:1.1, paddingTop:'1.2rem'}}>
                 Anne's Antiques
                 </a>
-            <p style={{fontSize:isMobile?'1.25rem':null}}>Full-stack inventory management system.</p>
+                <br/>
+            <p style={{fontSize:isMobile?'1rem':null, fontWeight:600}}>Full-stack inventory management system.</p>
             <a className='project-link' href="https://github.com/JonkHunkle/WebSynth" target='_blank' rel="noreferrer" style={{fontSize:isMobile?'2rem':null}}>
               Repo
             </a>
-            <p style={{fontSize:isMobile?'1.25rem':null}}>
+            <p style={{fontSize:isMobile?'1rem':null, fontWeight:600}}>
             MongoDB, Express.js, React.js, Node.js
             </p>
           </div> 
@@ -58,14 +60,15 @@ export default function Projects() {
       <div className="carousel-item"  style={{borderRadius:'.5rem', backgroundImage:`url(${littleLemon})`, backgroundSize:'cover'}}>
             <h5 className='visually-hidden'>Little Lemon Restaurant</h5>
           <div className="carousel-caption d-md-block" style={{height:'inherit',placeContent:'center'}}>
-                <a className='project-link' href="https://littlelemon-pi.vercel.app/" target='_blank' rel="noreferrer" style={{fontSize:isMobile?'2rem':null}}>
-                Little Lemon Restaurant
+                <a className='project-link' href="https://littlelemon-pi.vercel.app/" target='_blank' rel="noreferrer" style={{fontSize:isMobile?'1.8rem':null, lineHeight:1.1, paddingTop:'1.2rem'}}>
+                Little&nbsp;Lemon Restaurant
                 </a>
-            <p style={{fontSize:isMobile?'1.25rem':null}}>Example restaurant site</p>
+                <br/>
+            <p style={{fontSize:isMobile?'1rem':null, fontWeight:600}}>Example restaurant site</p>
             <a className='project-link' href="https://github.com/JonkHunkle/littlelemon" target='_blank' rel="noreferrer" style={{fontSize:isMobile?'2rem':null}}>
               Repo
             </a>
-            <p style={{fontSize:isMobile?'1.25rem':null}}>
+            <p style={{fontSize:isMobile?'1rem':null, fontWeight:600}}>
             React.js, Node.js, CSS, Jest
             </p>
           </div> 

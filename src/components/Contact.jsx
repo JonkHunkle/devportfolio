@@ -60,7 +60,7 @@ let {VITE_APP_SERVICE,
                 <p className='contact-header' style={{fontSize:isMobile?'1.25rem':null}}>Fill out the form below and I will get back to you as soon as possible!</p>
 
                         <form className='contact-form flex flex-col' style={{gap:'2.5rem'}}>
-                            <div className="form-group mb-6 flex-row mx-auto" style={{width:'75svw', gap:'1rem'}}>
+                            <div className={`form-group mb-6 flex-row mx-auto`} style={{width:isMobile?'75svw':'50svw', gap:'1rem'}}>
                                 <input type="text" onChange={handleChange} className="form-control block
         w-full
         px-3
@@ -116,7 +116,7 @@ let {VITE_APP_SERVICE,
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
       "
         value={formState.message}
-        style={{resize:'none', placeSelf:'center', width:'75svw'}}
+        style={{resize:'none', placeSelf:'center', width:isMobile?'75svw':'50svw'}}
         name='message'
                                     rows="5"
                                     placeholder="Message"
