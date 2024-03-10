@@ -6,7 +6,7 @@ let {VITE_APP_SERVICE,
     import { useMediaQuery } from 'react-responsive';
     
     export default function Contact() {
-    const isMobile = useMediaQuery({ query: `(max-width: 428px)` });
+    const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
     const [modalOpen, setModalOpen] = useState(false)
     const [formState, setForm] = useState({ name: '', email: '', message: '' })
     const [isActive, setIsActive] = useState(false);
@@ -53,14 +53,14 @@ let {VITE_APP_SERVICE,
         setIsActive(true);
       }, []);
     return (
-        <div className={`page contact ${isActive ? 'active' : ''}`}>
+        <div  className={`page contact ${isActive ? 'active' : ''}`} >
             <h1 className='visually-hidden'>Contact Page</h1>
-                <h2 className='animated-gradient' style={{fontSize:isMobile?'3.5rem':null, textAlign:'left', padding:isMobile?0:null}}>Lets connect!</h2> 
-            <div className='card' style={{gap:'3.5rem'}}>
+                <h2 className='animated-gradient' style={{fontSize:isMobile?'4rem':null, textAlign:'left', lineHeight:.9, padding:isMobile?0:null}}>Lets connect!</h2> 
+            <div className='card' style={{gap:isMobile?'2rem':null}}>
                 <p className='contact-header' style={{fontSize:isMobile?'1.25rem':null}}>Fill out the form below and I will get back to you as soon as possible!</p>
 
                         <form className='contact-form flex flex-col' style={{gap:'2.5rem'}}>
-                            <div className={`form-group mb-6 flex-row mx-auto`} style={{width:isMobile?'75svw':'50svw', gap:'1rem'}}>
+                            <div className={`form-group mb-6 flex-row mx-auto`} style={{width:'100%', gap:'1rem'}}>
                                 <input type="text" onChange={handleChange} className="form-control block
         w-full
         px-3
@@ -95,7 +95,7 @@ let {VITE_APP_SERVICE,
         value={formState.email}
         placeholder="Email address" />
                             </div>
-                            <div className="form-group mb-6">
+                            <div className="form-group mb-6 w-50">
                                 <textarea onChange={handleChange}
                                     className="
                                     input
