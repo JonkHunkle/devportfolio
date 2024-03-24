@@ -92,7 +92,7 @@ export default function Projects() {
                 </h3>
                 <br />
                 <p style={{ fontSize: isMobile ? "1rem" : null }}>
-                  Open source drone additive synthesizer
+                  Open source additive synthesizer
                 </p>
                 <h4
                   className="project-link"
