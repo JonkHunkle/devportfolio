@@ -19,7 +19,7 @@ export default function Footer() {
         </a>
         <a
           className="nav-link"
-          href="https://github.com/JonkHunkle"
+          href="https://github.com/davidczerwinski"
           rel="noreferrer"
           target="_blank"
         >

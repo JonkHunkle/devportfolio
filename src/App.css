@@ -468,7 +468,19 @@ a {
   opacity: 1;
 }
 
-@media (max-width: 428px) {
+.carousel-item{
+   animation: fadeIn .75s ease-in forwards;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@media (max-width: 749px) {
   /* .App{
     min-height: inherit;
   } */
@@ -528,7 +540,7 @@ a {
     line-height: 1.5;
   }
   .animated-gradient {
-    text-align: center;
+    text-align: center!important;
     padding-top: 2rem;
     font-size: 5rem;
   }

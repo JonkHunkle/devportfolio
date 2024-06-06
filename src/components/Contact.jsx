@@ -5,7 +5,7 @@ let { VITE_APP_SERVICE, VITE_APP_TEMPLATE, VITE_APP_PASSWORD } = import.meta
 import { useMediaQuery } from "react-responsive";
 
 export default function Contact() {
-  const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
+  const isMobile = useMediaQuery({ query: `(max-width: 796px)` });
   const [modalOpen, setModalOpen] = useState(false);
   const [formState, setForm] = useState({ name: "", email: "", message: "" });
   const [isActive, setIsActive] = useState(false);
@@ -82,8 +82,8 @@ export default function Contact() {
 
         <form className="contact-form flex flex-col" style={{ gap: "2.5rem" }}>
           <div
-            className={`form-group mb-6 flex-row mx-auto`}
-            style={{ width: "100%", gap: "1rem" }}
+            className={`form-group mb-6  mx-auto`}
+            style={{ width: "85%", gap: "1rem", flexDirection:isMobile ? "column" : 'row' }}
           >
             <input
               type="text"
@@ -130,7 +130,7 @@ export default function Contact() {
               placeholder="Email address"
             />
           </div>
-          <div className="form-group mb-6 w-50">
+          <div className="form-group mb-6">
             <textarea
               onChange={handleChange}
               className="

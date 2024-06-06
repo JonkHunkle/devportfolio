@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 export default function About() {
-  const isMobile = useMediaQuery({ query: `(max-width: 428px)` });
+  const isMobile = useMediaQuery({ query: `(max-width: 675px)` });
   const [showCard, setShowCard] = useState(false);
   const [isActive, setIsActive] = useState(false);
   const handleClick = () => {

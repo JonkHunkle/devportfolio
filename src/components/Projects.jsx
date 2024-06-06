@@ -11,6 +11,29 @@ export default function Projects() {
   useEffect(() => {
     setIsActive(true);
   }, []);
+
+
+
+//   const handleFade = async(e)=>{
+// let element = document.getElementsByClassName('carousel-item active')[0]
+// element.style.animation = 'fadeOut 1s ease-out forwards'
+// new Promise((resolve) => {
+//   setTimeout(() => {
+//       resolve();
+//   }, 1000);
+// });
+// let elements = document.getElementsByClassName('carousel-item')
+// for(let el of elements){
+//   el.style.animation = 'fadeIn 1s ease-out forwards'
+// }
+
+
+//   }
+
+
+
+
+
   return (
     <div
       className={`page ${isActive ? "active" : ""}`}
@@ -32,7 +55,7 @@ export default function Projects() {
       >
         <div
           id="carouselExampleCaptions"
-          className="carousel slide carousel-fade"
+          className="carousel slide"
           data-ride="carousel"
         >
           <div className="carousel-indicators">
@@ -92,7 +115,7 @@ export default function Projects() {
                 </h3>
                 <br />
                 <p style={{ fontSize: isMobile ? "1rem" : null }}>
-                  Open source drone additive synthesizer
+                  Open source additive drone synthesizer
                 </p>
                 <h4
                   className="project-link"
