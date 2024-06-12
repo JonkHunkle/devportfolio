@@ -98,7 +98,7 @@ export default function About() {
         </p>
         <a
           className="resume-link text-3xl text-center w-fit flex flex-col content-center justify-around self-center hover:bg-slate-500 rounded-box hover:bg-opacity-25 transition duration-700 bg-slate-300 bg-opacity-25 md:py-8 p-12 md:px-96"
-          href="https://drive.google.com/file/d/1MXPtPwHeaOBl5mX-v0kRFFOcPxoZX_tP/view?usp=sharing"
+          href="https://drive.google.com/file/d/1l9JzYE4pmEHCWXpZ0zfTXRBWEq4CHg8h/view?usp=sharing"
           download="davidResume"
           target="_blank"
           rel="noreferrer"
